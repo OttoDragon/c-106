@@ -20,10 +20,10 @@ while True:
     
     # Extraia as caixas delimitadoras para quaisquer corpos identificados
     for (x,y,w,h) in bodies:
-       cv2.rectangle(gray,(x,y),(x+w,y+h),(255,0,0),2)
+       cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
        roy_color = gray[y:y+h, x:x+w]
        cv2.imwrite('face.jpg',roy_color)
-    cv2.imshow()
+       cv2.imshow()
 
     if cv2.waitKey(1) == 32: #32 é a barra de espaço
         break
